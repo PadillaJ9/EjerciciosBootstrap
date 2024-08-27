@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PlatController from "../controllers/PlatController";
+import Plat from "../components/Plat.astro";
+
+let platController = new PlatController();
+let menu = await platController.getMenu();
+console.log(menu);
+---
+
+<Layout>
+    <style>
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .menu-title {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .menu-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .menu-item-description {
+            text-align: left;
+        }
+    </style>
+
+    <div class="menu-container">
+        <h1 class="menu-title">MENU DEL DIA</h1>
+        
+        {
+            menu.length && menu.map(Plat => (
+                <div class="menu-item" >
+                    <img src={Plat.Imagen} alt={Plat.Name} />
+                    <div class="menu-item-description">
+                        <h2>{Plat.Name}</h2>
+                        <p>{Plat.Precio}</p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</Layout>

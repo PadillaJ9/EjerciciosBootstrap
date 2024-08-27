@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PlatController from "../controllers/PlatController";
+import Plat from "../components/Plat.astro";
+
+let platController = new PlatController();
+let menu = await platController.getCarta();
+console.log(menu);
+
+---
+
+<style>
+    .menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .menu-title {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .card-description {
+        font-size: 1em;
+        color: #555;
+    }
+</style>
+
+<Layout>
+    <h1 class="menu-title">CARTA</h1>
+    <div class="menu-container">
+        {
+            menu.length && menu.map(plat => (
+                <div class="card" >
+                    <img src={plat.Imagen} alt={plat.Name} />
+                    <div class="card-content">
+                        <h2 class="card-title">{plat.Name}</h2>
+                        <p class="card-description">{plat.Descripción}</p>
+                        <p class="card-description">Precio: {plat.Precio} Euros</p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</Layout>

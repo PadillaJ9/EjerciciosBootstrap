@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Parquet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Venta de Parquet de Alta Calidad</h1>
+            <nav>
+                <ul>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="intro">
+        <div class="container">
+            <h2>Bienvenido a Nuestra Tienda de Parquet</h2>
+            <p>Ofrecemos una amplia variedad de parquets de la mejor calidad para todos tus proyectos de remodelación. Nuestros productos combinan durabilidad y elegancia, perfectos para cualquier espacio.</p>
+        </div>
+    </section>
+
+    <section id="productos" class="container">
+        <h2>Nuestros Productos</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="parquet1.jpg" alt="Parquet Roble">
+                <h3>Parquet de Roble</h3>
+                <p>Durabilidad y estilo clásico.</p>
+            </div>
+            <div class="producto">
+                <img src="parquet2.jpg" alt="Parquet Nogal">
+                <h3>Parquet de Nogal</h3>
+                <p>Elegancia y resistencia.</p>
+            </div>
+            <div class="producto">
+                <img src="parquet3.jpg" alt="Parquet Cerezo">
+                <h3>Parquet de Cerezo</h3>
+                <p>Calidez y sofisticación.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="container">
+        <h2>Galería</h2>
+        <div class="galeria-grid">
+            <img src="galeria1.jpg" alt="Imagen 1">
+            <img src="galeria2.jpg" alt="Imagen 2">
+            <img src="galeria3.jpg" alt="Imagen 3">
+        </div>
+    </section>
+
+    <section id="testimonios" class="container">
+        <h2>Testimonios</h2>
+        <div class="testimonios-grid">
+            <div class="testimonio">
+                <p>"El parquet de roble transformó mi sala de estar. ¡Estoy encantado!"</p>
+                <h4>- Juan Pérez</h4>
+            </div>
+            <div class="testimonio">
+                <p>"Excelente calidad y servicio. Muy recomendados."</p>
+                <h4>- María López</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="container">
+        <h2>Contacto</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Venta de Parquet. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

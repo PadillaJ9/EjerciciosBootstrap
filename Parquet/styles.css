@@ -1,0 +1,149 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background: #6c757d;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+#intro {
+    text-align: center;
+    background-color: #e9ecef;
+    padding: 60px 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#intro h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.productos-grid, .galeria-grid, .testimonios-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.producto, .testimonio {
+    flex: 1 1 300px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto img, .galeria-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.galeria-grid img {
+    flex: 1 1 300px;
+    margin: 10px;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: 600;
+}
+
+form input, form textarea {
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 15px;
+    background: #6c757d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #5a6268;
+}
+
+footer {
+    background: #6c757d;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}

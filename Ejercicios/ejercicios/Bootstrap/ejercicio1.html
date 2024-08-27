@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de BOOTSTRAP</title>
+    <style>
+        body {
+            font-size: 16px; /* Tamaño de fuente por defecto */
+        }
+
+        @media (max-width: 799px) {
+            body {
+                background-color: lightblue;
+                font-size: 80px; /* Aumenta el tamaño de la fuente para pantallas pequeñas */
+            }
+            #div1 {
+                display: block;
+            }
+            #div2 {
+                display: none;
+            }
+        }
+
+        @media (min-width: 800px) {
+            body {
+                background-color: blueviolet;
+                font-size: 80px; /* Aumenta el tamaño de la fuente para pantallas grandes */
+            }
+            #div1 {
+                display: none;
+            }
+            #div2 {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <p>Hasta 799 px</p>
+    </div>
+    <div id="div2">
+        <p>Hasta 800 px o más</p>
+    </div>
+</body>
+</html>

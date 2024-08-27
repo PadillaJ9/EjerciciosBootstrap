@@ -1,0 +1,21 @@
+---
+
+let {dades} = Astro.props;
+
+---
+
+<style>
+    div {
+        background-color: beige;
+        padding: 20px;
+        border: 1px solir red;
+    }
+</style>
+<div>
+    <h1>{dades.Name}</h1>
+    { dades.Imagen && <img src={dades.Imagen} alt={dades.Name} /> }
+    <p>{dades.Precio} Euros</p>
+    <p>{dades.Descripción}</p>
+    
+</div>
+

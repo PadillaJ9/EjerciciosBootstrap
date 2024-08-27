@@ -1,0 +1,94 @@
+---
+let numeros = [];
+for (let i = 0; i <= 10; i++) {
+  numeros.push(i);
+}
+
+// Dividir los números en grupos de 10
+const grupos = [];
+for (let i = 0; i < numeros.length; i += 10) {
+  grupos.push(numeros.slice(i, i + 10));
+}
+
+export { grupos };
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        {grupos.map(grupo => (
+          <div class="cubo-container">
+            {grupo.map(numero => (
+              <button class="BotonVerde" onclick="mostrarNumero({numero})">{numero}</button>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div style="display: flex;">
+        <div class="containerRojo">
+          <button class="BotonRojo" onclick="mostrarMensaje('Par')">Par</button>
+          <button class="BotonRojo" onclick="mostrarMensaje('Rojo')">Rojo</button>
+        </div>
+        <div class="containerNegro">
+          <button class="BotonNegro" onclick="mostrarMensaje('Inpar')">Inpar</button>
+          <button class="BotonNegro" onclick="mostrarMensaje('Negro')">Negro</button>
+        </div>
+      </div>
+    </div>
+	<div>
+		<h3>Resultado </h3>
+	</div>
+    <script>
+      function mostrarNumero(numero) {
+        alert('Has clickeado el número ' + numero);
+      }
+
+      function mostrarMensaje(mensaje) {
+        alert('Has clickeado el botón ' + mensaje);
+      }
+    </script>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap; /* Permitir que los grupos se envuelvan en líneas */
+      }
+      .cubo-container {
+        display: flex;
+      }
+      .BotonVerde,
+      .BotonRojo,
+      .BotonNegro {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        font-size: 20px; /* Cambia el tamaño de la letra */
+        line-height: 100px; /* Centra verticalmente el texto */
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 4px; /* Agrega espacio entre los botones */
+      }
+
+      .BotonVerde {
+        color: rgb(255, 255, 255);
+        background-color: green;
+      }
+      .BotonRojo {
+        color: white;
+        background-color: red;
+      }
+      .BotonNegro {
+        color: white;
+        background-color: black;
+      }
+    </style>
+  </body>
+</html>

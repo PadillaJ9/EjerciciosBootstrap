@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 6</title>
+    <style>
+        body {
+            font-family: "Lucida Sans Unicode", sans-serif;
+            margin: 20px;
+        }
+
+        .contenedor {
+            border: 1px solid #333;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #e2e2e2;
+        }
+
+        .boton {
+            border-style: solid;
+            border-color: aliceblue;
+            color: rgb(120, 124, 127);
+            width: 100px;
+            height: 40px;
+            background: linear-gradient(to bottom, white, rgb(4, 255, 0));
+
+        }
+
+        .boton:hover {
+            background: linear-gradient(to bottom, white, maroon);
+            color: #000000;
+        }
+
+        .ul {
+            list-style: none;
+        }
+
+        /* Estilo para que la imagen ocupe toda la pantalla horizontalmente */
+        #imagen {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #imagen img {
+            width: 100%;
+            height: auto; /* Mantener la proporción de la imagen */
+            display: block; /* Eliminar espacio en línea alrededor de la imagen */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div style="border-style: solid; border-color: aliceblue; padding: 2%; border-width: 8px;">
+
+        <header>
+            <div id="imagen">
+                <img src="Imagenes/panoramica.jpg" alt="Montañas">
+            </div>
+            
+            <div style="display: flex; justify-content: center; align-items: center">
+                <h1 style="color: #33ff00; margin-right: 10px">PARQUE NATURAL</h1>
+                <h1 style="color: #ffd000">SIERRA BLANCA</h1>
+            </div>
+        </header>
+
+        <div style="display: flex;">
+            <div style="display: flex; justify-content: space-between; padding: 5px">
+                <ul>
+                    <button class="boton">Inicio</button>
+                    <button class="boton">Especies</button>
+                    <button class="boton">Reservas</button>
+                    <button class="boton">Galeria</button> 
+                </ul>
+            </div>
+
+            <div style="
+            border-style: solid;
+            border-color: aliceblue;
+            padding: 2%;
+            flex-grow: 1;
+            margin-left: 20px;
+            
+
+          ">
+                <h3 style="color: #00ff40">Bienvenidos al Parque Natural</h3>
+                <hr style="border-color: #00ff40" />
+                <p>
+                    El Parque Natural Sierra Blanca es un refugio de biodiversidad,
+                    hogar de numerosas especies endémicas. Sus paisajes impresionantes y
+                    rutas de senderismo ofrecen una experiencia única para los amantes
+                    de la naturaleza. Descubra la magia de este tesoro natural mientras
+                    explora sus reservas y galerías fotográficas.
+                </p>
+            </div>
+        </div>
+        <footer style=" text-align: center;color: #e2e2e2;"><p><em>La imagen del titulo pertenece a PETER y se distribuye bajo licencia Creador de Archivos XL</em></p></footer>
+
+    </div>
+</body>
+
+</html>
